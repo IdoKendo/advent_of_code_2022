@@ -9,7 +9,10 @@ packages = [{include = "advent_of_code_2022"}]
 [tool.poetry.dependencies]
 python = "^3.11"
 pytest = "^7.2.0"
+tox = "^3.27.1"
 
+[tool.pytest.ini_options]
+testpaths = ["tests"]
 
 [build-system]
 requires = ["poetry-core"]
