@@ -1,3 +1,6 @@
+from advent_of_code_2022.common import read_input
+
+
 def get_item_value(item: str) -> int:
     if item.islower():
         return ord(item) - 96
@@ -9,9 +12,7 @@ def get_item_value(item: str) -> int:
 
 def sum_of_priority_items(input_file_path: str) -> int:
     common_items_value = 0
-    with open(input_file_path) as f:
-        lines = f.readlines()
-    for line in lines:
+    for line in read_input(input_file_path):
         compartments = line[: len(line) // 2], line[len(line) // 2 :]  # noqa: E203
         common_items = set(compartments[0]).intersection(compartments[1])
         for item in common_items:
@@ -21,9 +22,7 @@ def sum_of_priority_items(input_file_path: str) -> int:
 
 def sum_of_elf_groups(input_file_path: str, elf_group_size: int = 3) -> int:
     elf_groups_sum = 0
-    with open(input_file_path) as f:
-        lines = f.read().splitlines()
-    groups = zip(*(iter(lines),) * elf_group_size)
+    groups = zip(*(iter(read_input(input_file_path)),) * elf_group_size)
     for group in groups:
         common_items = set.intersection(*map(set, group))
         for item in common_items:

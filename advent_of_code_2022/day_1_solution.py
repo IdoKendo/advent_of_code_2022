@@ -1,12 +1,12 @@
+from advent_of_code_2022.common import read_input
+
+
 def create_elves_list(input_file_path: str) -> list[int]:
-    with open(input_file_path) as f:
-        lines = f.readlines()
     list_of_elves = []
     curr_elf = 0
-    for line in lines:
-        value = line.strip()
-        if value.isnumeric():
-            curr_elf += int(value)
+    for line in read_input(input_file_path):
+        if line.isnumeric():
+            curr_elf += int(line)
         else:
             list_of_elves.append(curr_elf)
             curr_elf = 0

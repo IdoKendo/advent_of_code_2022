@@ -1,5 +1,7 @@
 from enum import Enum
 
+from advent_of_code_2022.common import read_input
+
 
 class Hand(Enum):
     ROCK = "A"
@@ -56,9 +58,7 @@ def choose_hand(opponent: Hand, outcome: ExpectedOutcome) -> Hand:
 
 def calculate_score(input_file_path: str) -> int:
     score = 0
-    with open(input_file_path) as f:
-        lines = f.readlines()
-    for line in lines:
+    for line in read_input(input_file_path):
         values = line.strip().split()
         score += resolve_round(Hand(translate_hand(values[1])), Hand(values[0]))
     return score
@@ -66,9 +66,7 @@ def calculate_score(input_file_path: str) -> int:
 
 def calculate_score_2(input_file_path: str) -> int:
     score = 0
-    with open(input_file_path) as f:
-        lines = f.readlines()
-    for line in lines:
+    for line in read_input(input_file_path):
         values = line.strip().split()
         opponent = Hand(values[0])
         player = choose_hand(opponent, ExpectedOutcome(values[1]))
