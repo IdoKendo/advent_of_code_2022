@@ -8,7 +8,7 @@ def create_set_from_task(task: str) -> set[int]:
     return {i for i in range(int(start), int(end) + 1)}
 
 
-def get_overlap(input_file_path: str, overlap_condition: Callable) -> int:
+def get_overlap(input_file_path: str, overlap_condition: Callable[[set, set], bool]) -> int:
     overlap_count = 0
     for line in read_input(input_file_path):
         task1, task2 = line.split(",")
