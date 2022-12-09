@@ -10,9 +10,7 @@
 
 I am participating in the 2022 event casually, and created this repo to store my solutions.
 
-As a courtesy to all puzzle solvers, this repo will remain private until the end of the event.
-
-Let me know if I did something inefficient or I could've done something better, I want to learn!
+Let me know if I did something inefficient, or I could've done something better, I want to learn!
 
 <!-- Badges -->
 
