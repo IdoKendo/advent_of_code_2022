@@ -25,6 +25,7 @@ The times are time since the puzzle was posted, not since I started solving.
 
 | Day | Part 1 Time | Part 1 Rank | Part 2 Time | Part 2 Rank |
 |-----|-------------|-------------|-------------|-------------|
+| 16  | \>24h       | 17478       | \>24h       | 12432       |
 | 15  | 04:00:04    | 10377       | 05:05:18    | 7172        |
 | 14  | 06:06:23    | 14954       | 07:07:38    | 14900       |
 | 13  | 03:19:31    | 9784        | 03:38:06    | 9327        |
