@@ -11,6 +11,7 @@ python = "^3.11"
 pytest = "^7.2.0"
 tox = "^3.27.1"
 numpy = "^1.23.5"
+networkx = "^2.8.8"
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
